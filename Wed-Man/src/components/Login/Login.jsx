@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 export default function Login() {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleLogin } = useContext(AuthContext);
   const location = useLocation();
   console.log("Location in the login page", location);
 
@@ -16,6 +17,14 @@ export default function Login() {
     console.log(email, password);
 
     signIn(email, password)
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
       .then(() => {
         navigate(location?.state ? location.state : "/");
       })
@@ -65,6 +74,15 @@ export default function Login() {
           Register
         </Link>
       </p>
+      <div className="flex justify-center items-center">
+        <button
+          onClick={handleGoogleLogin}
+          className="flex items-center bg-gray-200 px-5 py-2 rounded-lg gap-2 text-lg font-medium "
+        >
+          <FcGoogle className="text-3xl" />
+          Login with Google
+        </button>
+      </div>
     </div>
   );
 }

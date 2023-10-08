@@ -2,7 +2,7 @@ import logo from "././../../assets/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="footer footer-center text-[#ff69b4] p-10 bg-[#ffcbe5] rounded-t-xl text-white">
+    <footer className="footer footer-center text-[#ff69b4] p-10 bg-[#ffcbe5] mt-20 rounded-t-xl">
       <aside>
         <img className="w-52" src={logo} alt="" />
         <p className="font-bold mt-5 mb-2">

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Wedding Photography",
+    "image": "https://i.ibb.co/T2Mc7Kx/service1.jpg",
+    "price": 2000,
+    "description": "Capture your special day with professional photography.",
+    "details": "Capture your special day with our Wedding Photography service. Our experienced photographers are dedicated to preserving the most memorable moments of your wedding. With a full day of coverage, we ensure that every aspect of your celebration is beautifully documented. Our package includes edited high-resolution photos that showcase the essence of your wedding. Additionally, we provide a professionally designed photo album that you'll treasure for years to come. From candid shots to formal portraits, we capture the emotions, joy, and love of your wedding day."
+  },
+  {
+    "id": 2,
+    "name": "Wedding Flowers",
+    "image": "https://i.ibb.co/KmY123W/service2.jpg",
+    "price": 1500,
+    "description": "Elegant floral arrangements to decorate your wedding venue.",
+    "details": "Elevate your wedding decor with our Wedding Flowers service. We offer an extensive range of floral arrangements, all customized to match your wedding theme and color palette. Whether you prefer traditional or contemporary designs, our talented florists will create stunning centerpieces, bouquets, and decorative elements that reflect your style. Beyond aesthetics, our service includes convenient flower delivery and setup at your venue. We ensure that every corner of your wedding space is adorned with the beauty and fragrance of fresh blooms, adding a touch of natural elegance to your celebration."
+  },
+  {
+    "id": 3,
+    "name": "Catering Services",
+    "image": "https://i.ibb.co/wQn22C1/service3.jpg",
+    "price": 3500,
+    "description": "Delicious catering options for your wedding guests.",
+    "details": "Delight your guests with our Catering Services, where culinary excellence meets exceptional service. Our diverse menu options cater to all tastes and dietary preferences, ensuring that every guest has a memorable dining experience. From delectable appetizers to mouthwatering main courses and decadent desserts, we craft a menu that suits your preferences and complements your wedding theme. Our professional staff takes care of every detail, from food presentation to service, allowing you to savor your special day without worries. We pride ourselves on using only the finest ingredients to create dishes that are as visually appealing as they are delicious."
+  },
+  {
+    "id": 4,
+    "name": "Mehendi Artists",
+    "image": "https://i.ibb.co/n75jG2W/service4.jpg",
+    "price": 800,
+    "description": "Exquisite Mehendi designs for your wedding celebration.",
+    "details": "Enhance your wedding celebration with the artistry of our Mehendi Artists. Our skilled artists specialize in creating intricate and beautiful henna designs on your hands and feet. Mehendi, a traditional form of body art, adds cultural significance and beauty to your wedding. Our artists work closely with you to design patterns that match your style and preferences. Each stroke is a masterpiece, and the resulting henna designs are temporary but can last for weeks. We take pride in our attention to detail and use only high-quality, natural henna paste, ensuring both safety and a deep, long-lasting stain."
+  },
+  {
+    "id": 5,
+    "name": "Venue Rental",
+    "image": "https://i.ibb.co/DtJy6Yh/service5.jpg",
+    "price": 5000,
+    "description": "Beautiful and spacious venue rental for your wedding.",
+    "details": "Experience the wedding of your dreams with our Venue Rental service. Our beautiful and spacious venue is the perfect backdrop for your wedding ceremony and reception. Our package includes seating arrangements, lighting, and event coordination to create a seamless and elegant atmosphere. You'll have access to both indoor and outdoor spaces, allowing you to design your wedding exactly as you envision it. Our professional team is dedicated to making your special day unforgettable. From the moment you step into our venue, you'll be enchanted by its charm and versatility, setting the stage for a truly magical celebration."
+  },
+  {
+    "id": 6,
+    "name": "Wedding Attire",
+    "image": "https://i.ibb.co/J733vMc/service6.jpg",
+    "price": 2000,
+    "description": "Elegant wedding attire for the bride and groom.",
+    "details": "Look your best on your big day with our Wedding Attire service. We offer a wide selection of wedding dresses, suits, and accessories for both the bride and groom. Our collection includes a variety of styles, from classic and timeless to modern and trendy. Our experienced staff will assist you in finding the perfect attire that complements your personal style and fits you like a dream. We understand that your wedding attire is a reflection of your unique personality, and we're committed to helping you shine on your wedding day. From the gown's intricate details to the finest fabrics and tailored suits, we have everything you need to make your wedding attire a stunning and memorable part of your celebration."
+  }
+]

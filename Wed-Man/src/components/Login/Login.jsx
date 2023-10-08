@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
@@ -19,8 +19,8 @@ export default function Login() {
   });
 
   const { signIn, googleLogin } = useContext(AuthContext);
+  const [loginError, setLoginError] = useState(null);
   const location = useLocation();
-  console.log("Location in the login page", location);
 
   const navigate = useNavigate();
 
@@ -28,7 +28,6 @@ export default function Login() {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
 
     signIn(email, password)
       .then(() => {
@@ -38,8 +37,13 @@ export default function Login() {
           title: "Signed in successfully",
         });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        // setLoginError(error.message);
+        setLoginError("Invalid email and password");
+      });
   };
+  console.log(loginError);
 
   const handleGoogleLogin = () => {
     googleLogin()
@@ -105,6 +109,9 @@ export default function Login() {
           Login with Google
         </button>
       </div>
+      <p className="text-center text-red-500 text-lg font-medium mt-5">
+        {loginError}
+      </p>
     </div>
   );
 }

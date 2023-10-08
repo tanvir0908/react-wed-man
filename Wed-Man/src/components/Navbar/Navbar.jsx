@@ -22,6 +22,20 @@ export default function Navbar() {
           About
         </NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink className="text-lg font-medium" to={"/offers"}>
+            Offer
+          </NavLink>
+        </li>
+      )}
+      {user && (
+        <li>
+          <NavLink className="text-lg font-medium" to={"/cashback"}>
+            Cashback
+          </NavLink>
+        </li>
+      )}
     </>
   );
 

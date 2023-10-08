@@ -23,23 +23,14 @@ export default function Register() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(null);
     const name = e.target.name.value;
     const email = e.target.email.value;
     const photo = e.target.photo.value;
     const password = e.target.password.value;
     console.log(name, photo, email, password);
 
-    // Password validation
-    if (password.length < 6) {
-      setError("Password is less than 6 characters");
-    } else if (!/[A-Z]/.test(password)) {
-      setError("Password don't have a capital letter");
-    } else if (!/[*@!#%&()^~{}]+/.test(password)) {
-      setError("Password don't have a special character");
-    }
     // Create user using email and password
-    if (error == null) {
+    if (/^(?=.*[A-Z])(?=.*[\W_]).{6,}$/.test(password)) {
       createUser(email, password)
         .then((result) => {
           console.log(result);
@@ -50,6 +41,10 @@ export default function Register() {
           navigate("/");
         })
         .catch((error) => console.log(error));
+    } else {
+      setError(
+        "Password should be more than 6 characters with at least 1 capital letter and 1 special character"
+      );
     }
   };
 
@@ -69,7 +64,6 @@ export default function Register() {
             name="name"
             placeholder="Enter your name"
             className="input input-bordered"
-            required
           />
         </div>
         <div className="form-control">
@@ -81,7 +75,6 @@ export default function Register() {
             name="photo"
             placeholder="Enter your photo url"
             className="input input-bordered"
-            required
           />
         </div>
         <div className="form-control">

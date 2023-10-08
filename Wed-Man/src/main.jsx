@@ -12,6 +12,8 @@ import ServiceDetails from "./components/Service/ServiceDetails";
 import Register from "./components/Register/Register";
 import AuthProvider from "./providers/AuthProvider";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Offers from "./components/NewPrivatePages/Offers";
+import Cashback from "./components/NewPrivatePages/Cashback";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +46,22 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("/servicesData.json"),
+      },
+      {
+        path: "/offers",
+        element: (
+          <PrivateRoute>
+            <Offers />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/cashback",
+        element: (
+          <PrivateRoute>
+            <Cashback />
+          </PrivateRoute>
+        ),
       },
     ],
   },

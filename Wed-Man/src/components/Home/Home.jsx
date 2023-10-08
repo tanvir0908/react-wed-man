@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Service from "../Service/Service";
+import Work from "../Work/Work";
 
 export default function Home() {
   const servicesData = useLoaderData();
@@ -18,6 +19,12 @@ export default function Home() {
             <Service key={data.id} data={data} />
           ))}
         </div>
+      </div>
+      <div>
+        <h2 className="text-6xl mt-10 mb-5 font-bold text-[#FF69B4]">
+          Our Work
+        </h2>
+        <Work />
       </div>
     </div>
   );

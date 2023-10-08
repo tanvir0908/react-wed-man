@@ -24,13 +24,12 @@ export default function ServiceDetails() {
           Price: {price}
         </p>
         <p className="text-xl font-medium text-gray-600">{details}</p>
-
-        {/* <Link
+        <Link
           to={"/"}
           className="px-20 py-4 duration-300 rounded-lg font-semibold text-lg bg-[#FF69B4] hover:bg-[#FF69B4] text-white hover:text-black mt-5"
         >
           Back Home
-        </Link> */}
+        </Link>
       </div>
     </div>
   );

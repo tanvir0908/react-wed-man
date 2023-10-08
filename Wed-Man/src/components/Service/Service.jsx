@@ -10,7 +10,7 @@ export default function Service({ data }) {
       <div className="card bg-[#ffcbe5] shadow-xl p-6">
         <figure>
           <img
-            className="hover:scale-110 transition h-96 duration-500 "
+            className="hover:scale-105 hover:rounded-xl rounded-xl transition h-96 duration-500 "
             src={image}
             alt=""
           />
@@ -20,7 +20,7 @@ export default function Service({ data }) {
           <p className="text-lg font-medium text-gray-500 mb-3">
             {description}
           </p>
-          <p className="text-lg font-medium text-gray-500 mb-3">
+          <p className="text-2xl font-medium text-gray-500 mb-3">
             Price: ${price}
           </p>
           <Link to={`/services/${id}`}>

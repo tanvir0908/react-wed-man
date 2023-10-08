@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/7QKK7RM/work1.jpg",
+    "name": "KATRINA & VICKY",
+    "location": "Ranthambore, India"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/TPmj5vF/work2.jpg",
+    "name": "SHIBANI & FARHAN",
+    "location": "Khandala, India"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/QMY2T0c/work3.jpg",
+    "name": "NATASHA & VARUN",
+    "location": "Alibaug, India"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/rMWqnBK/work4.jpg",
+    "name": "ANUSHKA & VIRAT",
+    "location": "Tuscany, Italy"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/G7hXfpr/work5.jpg",
+    "name": "PRIYANKA & NICK",
+    "location": "Mumbai, India"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/T1Nc6K7/work6.jpg",
+    "name": "PURVA & SHIVAM",
+    "location": "Jaipur, India"
+  }
+]

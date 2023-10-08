@@ -6,7 +6,7 @@ export default function Footer() {
       <aside>
         <img className="w-52" src={logo} alt="" />
         <p className="font-bold mt-5 mb-2">
-          ACME Industries Ltd. <br />
+          h4Plus Software Ltd. <br />
           Providing reliable tech since 1992
         </p>
         <p>Copyright © 2023 - All right reserved</p>

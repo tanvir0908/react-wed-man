@@ -2,8 +2,22 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
+import Swal from "sweetalert2";
 
 export default function Login() {
+  // Sweet Alert
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
+
   const { signIn, googleLogin } = useContext(AuthContext);
   const location = useLocation();
   console.log("Location in the login page", location);
@@ -19,6 +33,10 @@ export default function Login() {
     signIn(email, password)
       .then(() => {
         navigate(location?.state ? location.state : "/");
+        Toast.fire({
+          icon: "success",
+          title: "Signed in successfully",
+        });
       })
       .catch((error) => console.log(error));
   };
@@ -27,6 +45,10 @@ export default function Login() {
     googleLogin()
       .then(() => {
         navigate(location?.state ? location.state : "/");
+        Toast.fire({
+          icon: "success",
+          title: "Signed in successfully",
+        });
       })
       .catch((error) => console.log(error));
   };

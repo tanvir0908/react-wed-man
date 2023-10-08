@@ -1,24 +1,56 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 export default function Register() {
   const { createUser } = useContext(AuthContext);
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+  // Sweet Alert
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setError(null);
     const name = e.target.name.value;
     const email = e.target.email.value;
     const photo = e.target.photo.value;
     const password = e.target.password.value;
     console.log(name, photo, email, password);
 
+    // Password validation
+    if (password.length < 6) {
+      setError("Password is less than 6 characters");
+    } else if (!/[A-Z]/.test(password)) {
+      setError("Password don't have a capital letter");
+    } else if (!/[*@!#%&()^~{}]+/.test(password)) {
+      setError("Password don't have a special character");
+    }
     // Create user using email and password
-    createUser(email, password)
-      .then((result) => {
-        console.log(result);
-      })
-      .catch((error) => console.log(error));
+    if (error == null) {
+      createUser(email, password)
+        .then((result) => {
+          console.log(result);
+          Toast.fire({
+            icon: "success",
+            title: "Signed in successfully",
+          });
+          navigate("/");
+        })
+        .catch((error) => console.log(error));
+    }
   };
 
   return (
@@ -88,6 +120,7 @@ export default function Register() {
           Login
         </Link>
       </p>
+      <p className="text-center text-red-500 text-lg font-medium">{error}</p>
     </div>
   );
 }

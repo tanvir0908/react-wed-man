@@ -4,10 +4,10 @@
 import { Link } from "react-router-dom";
 
 export default function Service({ data }) {
-  const { id, name, image, price, description, details } = data;
+  const { id, name, image, price, description } = data;
   return (
     <div>
-      <div className="card bg-[#ffcbe5] shadow-xl p-6">
+      <div className="card bg-[#ffcbe5] shadow-xl py-6 px-6">
         <figure>
           <img
             className="hover:scale-105 hover:rounded-xl rounded-xl transition h-96 duration-500 "
@@ -24,7 +24,7 @@ export default function Service({ data }) {
             Price: ${price}
           </p>
           <Link to={`/services/${id}`}>
-            <button className="py-3 duration-300 w-full rounded-lg font-semibold text-lg bg-[#FF69B4] hover:bg-[#FF69B4] text-white hover:text-black">
+            <button className="py-3 my-5 duration-300 w-full rounded-lg font-semibold text-lg bg-[#FF69B4] hover:bg-[#FF69B4] text-white hover:text-black">
               See Details
             </button>
           </Link>

@@ -1,7 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 export default function Navbar() {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    logOut().then().catch();
+  };
+
   const navLinks = (
     <>
       <li>
@@ -53,12 +61,22 @@ export default function Navbar() {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <Link
-            className="btn normal-case px-10 text-lg bg-[#FF69B4] hover:bg-[#FF69B4] text-white hover:text-black"
-            to={"/login"}
-          >
-            Login
-          </Link>
+          {user ? (
+            <Link
+              onClick={handleSignOut}
+              className="btn normal-case px-10 text-lg bg-[#FF69B4] hover:bg-[#FF69B4] text-white hover:text-black"
+              to={"/"}
+            >
+              Log Out
+            </Link>
+          ) : (
+            <Link
+              className="btn normal-case px-10 text-lg bg-[#FF69B4] hover:bg-[#FF69B4] text-white hover:text-black"
+              to={"/login"}
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </>

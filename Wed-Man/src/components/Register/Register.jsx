@@ -5,7 +5,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 export default function Register() {
   const { createUser } = useContext(AuthContext);
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
@@ -15,7 +15,9 @@ export default function Register() {
 
     // Create user using email and password
     createUser(email, password)
-      .then((result) => console.log(result))
+      .then((result) => {
+        console.log(result);
+      })
       .catch((error) => console.log(error));
   };
 

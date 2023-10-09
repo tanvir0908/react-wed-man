@@ -1,13 +1,14 @@
 /* eslint-disable react/no-unknown-property */
 export default function Offers() {
   return (
-    <div className="flex justify-between mx-96 my-20">
-      <h2 className="w-2/4 text-3xl mt-16 leading-relaxed  font-semibold text-gray-600 ">
-        We Provide complimentory gifts to our customers. If you take any 4
+    <div className="flex justify-between flex-col lg:flex-row lg:mx-96 lg:my-20">
+      <h2 className="lg:w-2/4 text-3xl mt-5 lg:mt-16 leading-relaxed  font-semibold text-gray-600 ">
+        We Provide complementary gifts to our customers. If you take any 4
         services from us then we will provide you other 2 services at free of
         cost.
       </h2>
       <svg
+        className="w-full"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         width="685.67004"

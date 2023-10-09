@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unknown-property */
 export default function Cashback() {
   return (
-    <div className="flex justify-between mx-64 my-20">
-      <h2 className="w-2/4 text-3xl mt-52 leading-relaxed  font-semibold text-gray-600 ">
+    <div className="flex justify-between flex-col lg:flex-row lg:mx-96 lg:my-20">
+      <h2 className="lg:w-2/4 text-3xl mt-16 lg:mt-52 leading-relaxed  font-semibold text-gray-600 ">
         Book early and get upto 30% discount.
       </h2>
       <svg
+        className="w-full"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         data-name="Layer 1"

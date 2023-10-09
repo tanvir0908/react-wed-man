@@ -9,7 +9,7 @@ export default function Work() {
     .then((data) => setOurWork(data));
 
   return (
-    <div className="grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-5 mx-64">
+    <div className="grid grid-cols-1 md:grid-col-2 lg:grid-cols-3 gap-5 lg:mx-64">
       {ourWork.map((work) => (
         <SingleWork key={work.id} work={work} />
       ))}

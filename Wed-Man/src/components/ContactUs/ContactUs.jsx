@@ -12,19 +12,19 @@ export default function ContactUs() {
         <input
           placeholder="Enter your name"
           type="text "
-          className="border bg-gray-200 px-3 py-2 rounded w-1/4"
+          className="border bg-gray-200 px-3 py-2 rounded w-3/4 lg:w-1/4"
         />
         <br />
         <input
           placeholder="Enter your email"
           type="email"
-          className="border px-3 bg-gray-200 py-2 rounded w-1/4"
+          className="border px-3 bg-gray-200 py-2 rounded w-3/4 lg:w-1/4"
         />
         <br />
         <input
           placeholder="Subject"
           type="text"
-          className="border px-3 bg-gray-200 py-2 rounded w-1/4"
+          className="border px-3 bg-gray-200 py-2 rounded w-3/4 lg:w-1/4"
         />
         <br />
         <textarea
@@ -33,11 +33,11 @@ export default function ContactUs() {
           id=""
           cols="30"
           rows="10"
-          className="border bg-gray-200 px-3 py-2 rounded w-1/4"
+          className="border bg-gray-200 px-3 py-2 rounded w-3/4 lg:w-1/4"
         ></textarea>
         <br />
         <input
-          className="border cursor-pointer bg-[#ff69b4] font-medium px-3 py-2 rounded w-1/4"
+          className="border cursor-pointer bg-[#ff69b4] font-medium px-3 py-2 rounded w-3/4 lg:w-1/4"
           type="submit"
         />
       </form>

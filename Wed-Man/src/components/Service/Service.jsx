@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Service({ data }) {
   const { id, name, image, price, description } = data;
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-duration="3000">
       <div className="card bg-[#ffcbe5] shadow-xl py-6 px-6">
         <figure>
           <img

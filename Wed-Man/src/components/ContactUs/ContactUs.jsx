@@ -4,7 +4,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-duration="3000">
       <form
         onSubmit={handleForm}
         className="flex flex-col justify-center items-center"

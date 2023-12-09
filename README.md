@@ -1,5 +1,5 @@
+## Project Name: WedMan
 ## Live Link
-- Website Name: WedMan
 - Live Link: https://react-wed-man.web.app
 
 ## Features
